@@ -75,9 +75,15 @@ For any additional questions, please contact: [[Emiko Naomasa](https://www.linke
 
 ```
 ├── README.md                           
-├── notebook                                        <- 
-├── notebook                                        <- 
-├── notebook                                        <- 
+├── Data_cleaning_GeoIDs.ipynb                      <- Data Celaning Notebook for create GEO IDs
+├── Data_Cleaning_EDA1_Housing_Price.ipynb          <- Data Celaning and EDA Notebook for Model 1
+├── Data_Cleaning_EDA2_Neighborhood_Economy.ipynb   <- Data Celaning and EDA Notebook for Model 2 
+├── Model1_VAR_HousingPrice.ipynb                   <- Modeling Notebook for Model 1
+├── Model2_SARIMA_MerchantRevenue.ipynb             <- Modeling Notebook for Model 2 (Small Merchant's Revenue)
+├── Model3_SARIMA_GoogleMobility.ipynb              <- Modeling Notebook for Model 2 (Google Mobility)
+├── PostAnalysis1_HousingPrice.ipynb                <- Post Analysis Notebook for Model 1
+├── PostAnalysis2_MerchantRevenue.ipynb             <- Post Analysis Notebook for Model 2 (Small Merchant's Revenue)
+├── PostAnalysis3_GoogleMobility.ipynb              <- Post Analysis Notebook for Model 2 (Google Mobility)
 ├── PPTs.pdf                                        <- PDF version of project presentation
 └── Data                                            <- Both sourced externally and generated from code
                            
