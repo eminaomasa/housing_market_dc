@@ -1,29 +1,33 @@
-# Forecasting the 2022 housing market in the Washington DC metro area: Recommending the top 10 zip codes for real estate development
+# Forecasting the 2022 housing market in the Washington DC metro area 
+Author: Emiko Naomasa
 
 ## Business Understanding:
 
 In 2021, the U.S. housing market marked the highest housing sales in the past 15 years. Very low mortgage loan interest rates and change in people's work styles during the pandemic boosted housing demand all across the U.S.; as a consequence, the housing inventory in the market has dropped sharply, and housing prices have been rising. This trend of supply shortage and ascending house prices is expected to continue for the rest of 2022. 
-Add - Housing prices and Inventory 
 
 In this project, I develop a forecasting model of the 2022 housing prices for the Washington, DC, metropolitan area. A targeting stakeholder is a real estate developer who wants to take advantage of the current market and start new housing development in an area that promises a high return. My model will help a developer decide on places for the next housing project.  
-Add - Housing price varieties. 
 
 ## Deliverables: 
-I produced (1) a housing price forecasting model and (2) a local economic forecasting model. First, as a housing price forecast, I developed a model that returns a unique price forecast for each zip code. Because remote work has become the new normal during the pandemic, people can now choose a place for themselves, not commuting to work. Then, the hottest spot for real estate investment is no longer larger cities; rather, investment has spread across regions. Even in a same county, housing prices move very differently. Thus, I built a time series model for each zip code and provided a unique forecast. The second model provides a prediction for a local economy. Most homebuyers in today's market are people from large cities. Their preference is slight to a mid-sized towns with economic vibrancy. My second model predicts the economic activity of the neighborhood areas. These two models will be used together for a more granular view of the 2022 housing market. 
+
+![image](https://user-images.githubusercontent.com/38669459/151544970-cc989a08-96ae-4e77-a9ba-72bdb4a35f8e.png)
+
+
+I produced (1) a housing price forecasting model and (2) a next up-and-coming neighborhoods forecasting model. First, as a housing price forecast, I developed a model that returns a unique price forecast for each zip code. Because remote work has become the new normal during the pandemic, people can now choose a place for themselves, not commuting to work. Then, the hottest spot for real estate investment is no longer larger cities; rather, investment has spread across regions. Even in a same county, housing prices move very differently. Thus, I built a time series model for each zip code and provided a unique forecast. The second model predicts the next up-and-coming neighborhoods for 2022. Most homebuyers in today's market are people from large cities. Their preference is slight to a mid-sized towns with economic vibrancy. These two models will be used together for a more granular view of the 2022 housing market. First, I use the first model to forecast zip codes with the highest increases in housing prices in 2022. Then, I use the second model to filter the zip codes in the up and coming neighborhoods. 
+
 
 ## Data: 
-For the housing price mode, I obtained housing data from realtors and net population inflows in  zip codes from the United States Postal Service. All data are at a monthly/zip code level. 
 
-•	Housing Prices: This monthly data covers July 2016 to December 2021. I use median listing price data as housing price data and the number of active listings to measure housing supply in a given area. My sample includes only single-family homes. After I eliminated zip codes with fewer than 20 listings, my sample includes 191 zip codes in the Washington, DC, metro area. https://www.realtor.com/research/data/
+- Housing Prices [Realtor.com](https://www.realtor.com/research/data/): This monthly data covers July 2016 to December 2021. I use median listing price data as housing price data and the number of active listings to measure housing supply in a given area. My sample includes only single-family homes. After I eliminated zip codes with fewer than 20 listings, my sample includes 191 zip codes in the Washington, DC, metro area. 
 
-•	USPS Change of Address Data: This monthly data recodes the inflow and outflow of people from the zip codes. https://about.usps.com/who/legal/foia/library.htm   
-I use small business data from Economic Tracker, Google mobility data, and the COVID-19 daily new cases for the local economy model. 
+- [USPS Change of Address Data](https://www.google.com/covid19/mobility/index.html?hl=en): This monthly data recodes the inflow and outflow of people from the zip codes. 
 
-•	Google's Community Mobility Data: This is a daily measurement of time spent and the number of people in different types of places, including parks, retail and recreation, grocery, transit locations, and workplaces. I combine mobility data from retail, recreation, and grocery to measure vibrancy in the commercial place of a county. This daily data is available from January 2020.   https://www.google.com/covid19/mobility/index.html?hl=en 
+- [Google's Community Mobility Data](https://www.google.com/covid19/mobility/index.html?hl=en): This is a daily measurement of time spent and the number of people in different types of places, including parks, retail and recreation, grocery, transit locations, and workplaces. I combine mobility data from retail, recreation, and grocery to measure vibrancy in the commercial place of a county. This daily data is available from January 2020.   
 
-•	Small Business Revenue Data: This is weekly revenue data for small businesses at a county level. Data is in a year-over-year change. It covers from January 2019 to March 2020. Having active small companies is a good indicator of a robust local economy. 
+-	Small Merchants' Revenue Data from [Economic Tracker](https://tracktherecovery.org/): This is weekly revenue data for small merchants at a county level. Data is in a year-over-year change. It covers from January 2019 to January 2020. Having active small merchants is a good indicator of a robust local economy. 
 
-•	COVID-19 daily new cases: This is daily data available at the county level. I downloaded it from Economic Tracker.   https://tracktherecovery.org/ 
+-	COVID-19 daily new cases from [Economic Tracker](https://tracktherecovery.org/): This is daily data available at the county level. 
+
+For data cleaning and EDA, please read my notebooks; [Data Cleaning for Model 1](https://github.com/eminaomasa/housing_market_dc/blob/main/Data_Cleaning_EDA1_Housing_Price.ipynb), [Data Cleaning for Model 2](https://github.com/eminaomasa/housing_market_dc/blob/main/Data_Cleaning_EDA2_Neighborhood_Economy.ipynb).
 
 ## Modeling: 
 
