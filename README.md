@@ -62,21 +62,26 @@ Figure 1 plots the top 20 zip codes with largest expected housing price increase
 Figure 2A and 2B plot a list of counties with robust neighborhood economies. Counties in the middle of the metro, such as Washington DC or Arlington, are not on this list. Instead, a county distant from the city center shows strong local economy in terms of small businesses and the popularity of commercial areas. Especially, Frederick, a northern county on the map, seems like a promising county for local economic growth.
 Using these two figures, I filter the top 10 zip codes for the next real estate development project in 2022. Top 10 zip code recommendations are in Figure 3. 
 
-Figure 1: 
+Figure 1.
 
 ![image](https://user-images.githubusercontent.com/38669459/151550730-eff2f361-8850-4545-a609-d7e75132a621.png)
 
 
-Figure 2 A:
+Figure 2A.
+
 ![image](https://user-images.githubusercontent.com/38669459/151550689-4f1a4ad3-ad32-41c5-8b0c-96985882331a.png)
 
 
-Figure 2B:  
+Figure 2B.
+
 ![image](https://user-images.githubusercontent.com/38669459/151550597-95673892-e9bd-49d8-9195-53d3f5de94c5.png)
 
 
-Figure 3: Top 10 recommended zip codes for real estate development in 2022. 
-  
+Figure 3.
+
+![image](https://user-images.githubusercontent.com/38669459/151551088-4509bf3a-3f52-4293-bfcc-18991090d1d6.png)
+
+
 
 
 For forecasting analysis, please read my notebooks.
