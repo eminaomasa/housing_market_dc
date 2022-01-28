@@ -1,5 +1,7 @@
 # Forecasting the 2022 housing market in the Washington DC metro area 
-Author: Emiko Naomasa
+Last updated on January 28, 2022. 
+
+**Author: Emiko Naomasa**
 
 ## Business Understanding:
 
