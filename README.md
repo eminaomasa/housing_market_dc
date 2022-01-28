@@ -27,7 +27,7 @@ I produced (1) a housing price forecasting model and (2) a next up-and-coming ne
 
 -	COVID-19 daily new cases from [Economic Tracker](https://tracktherecovery.org/): This is daily data available at the county level. 
 
-For data cleaning and EDA, please read my notebooks; [Data Cleaning for Model 1](https://github.com/eminaomasa/housing_market_dc/blob/main/Data_Cleaning_EDA1_Housing_Price.ipynb), [Data Cleaning for Model 2](https://github.com/eminaomasa/housing_market_dc/blob/main/Data_Cleaning_EDA2_Neighborhood_Economy.ipynb).
+For data cleaning and EDA, please read my notebooks; [Data_Cleaning_EDA1_Housing_Price](https://github.com/eminaomasa/housing_market_dc/blob/main/Data_Cleaning_EDA1_Housing_Price.ipynb), [Data_Cleaning_EDA2_Neighborhood_Economy](https://github.com/eminaomasa/housing_market_dc/blob/main/Data_Cleaning_EDA2_Neighborhood_Economy.ipynb).
 
 ## Modeling: 
 
