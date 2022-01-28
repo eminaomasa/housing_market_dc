@@ -44,22 +44,24 @@ For modeling, please read my notebooks.
 
 
 ## Model Validation: 
-I use the root mean squared error (RMSE) to measure a model's prediction accuracy. I compare the VAR of the housing price model and SARIMAX of the economic forecasting model with naïve time-series modeling. The naïve time-series model is a simple shift of time series by one period. Thus, today's observed data becomes a prediction for tomorrow.  
+I use the root mean squared error (RMSE) to measure a model's prediction accuracy. I compare the VAR of the housing price model and SARIMAX of the economic forecasting model with naïve time-series modeling. The naïve time-series model is a simple shift of time series by one period.   
  
-Housing Price Forecasting: RMSE by VAR model varies widely across zip codes (from 3,641 to 545,165). Median RMSE is 32,300. Given that median housing prices in this region are around 600,000, the forecast of this model will be off by 6%, which is not a bad number. However, prediction performance varies widely by zip code. Compared with the RMSE of the naïve model ( 51,124) , the VA model shows a significantly lower RMSE. Thus, my VAR model improves prediction accuracy. 
+Housing Price Forecasting: RMSE by VAR model varies widely across zip codes (from 3,641 to 545,165). Median RMSE is 32,300. Given that median housing prices in this region are around 600,000, the forecast of this model will be off by 6%, which is not a bad number. However, prediction performance varies widely by zip code. Compared with the RMSE of the naïve model ( 51,124) , the VA model shows a significantly lower RMSE. Thus, my VAR model improves prediction performance. 
 
 Local Economy Forecasting:
-•	Small merchant revenue:  The RMSE of the SARIMAX model takes from 0.05 to 0.5, with the median at 0.13. Since small merchant revenue changes range from -0.555 to 0.141, the prediction is off by about 10% of the size of the original data. RMSE of the naïve  model is 0.12. This means that the SARIMAX forecast is no different from the naïve model forecast. 
 
-•	Google mobility in the commercial area:  The RMSE of the SARIMAX model varies from 162 to 394, with a median of 285. As the mobility index ranges from -669.0 to 686.0, the prediction is off about 20-25%. Compared with the RMSE of the naïve model (200), the SARIMAX model shows a larger RMSE. This means that the prediction accuracy of my SARIMAX model is no better than the naïve model's prediction.
+- Small merchant revenue:  The RMSE of the SARIMAX model takes from 0.05 to 0.5, with the median at 0.13. Since small merchant revenue changes range from -0.555 to 0.141, the prediction is off by about 10% of the size of the original data. RMSE of the naïve  model is 0.12. This means that the SARIMAX forecast is no different from the naïve model forecast. 
+
+- Google mobility in the commercial area:  The RMSE of the SARIMAX model varies from 162 to 394, with a median of 285. As the mobility index ranges from -669.0 to 686.0, the prediction is off about 20-25%. Compared with the RMSE of the naïve model (200), the SARIMAX model shows a larger RMSE. This means that the prediction accuracy of my SARIMAX model is no better than the naïve model's prediction.
 
 
 ## Findings:
-Figure 1 plots the top 20 zip codes with largest expected housing price increase in 2022. Compared to the top 20 zip codes with the largest price increases in 2019, which cluster around Washington, DC, the hotspots in 2022 are more spread across Virginia and Maryland. 
-Figure 2A and 2B plot a list of counties with robust local economies. Counties in the middle of the metro, such as Washington DC or Arlington, are not on this list. Instead, a county distant from the city center shows strong local economy in terms of small businesses and the popularity of commercial areas. Especially, Frederick, a northern county on the map, seems like a promising county for local economic growth.
+Figure 1 plots the top 20 zip codes with largest expected housing price increase in 2022. The hotspots in 2022 are spread across Virginia and Maryland. 
+Figure 2A and 2B plot a list of counties with robust neighborhood economies. Counties in the middle of the metro, such as Washington DC or Arlington, are not on this list. Instead, a county distant from the city center shows strong local economy in terms of small businesses and the popularity of commercial areas. Especially, Frederick, a northern county on the map, seems like a promising county for local economic growth.
 Using these two figures, I filter the top 10 zip codes for the next real estate development project in 2022. Top 10 zip code recommendations are in Figure 3. 
 
 Figure 1. Top 20 zip codes for the largest housing price increases in 2022. 
+
 
 Figure 2 A: Top 5 counties in terms of an increase in small merchants’ revenues in 2022.
 
@@ -68,19 +70,24 @@ Figure 2B: Top 5 counties in terms of an increase in visitors to commercial area
 Figure 3: Top 10 recommended zip codes for real estate development in 2022. 
 
 
+For forecasting analysis, please read my notebooks.
+- [PostAnalysis1_HousingPrice](https://github.com/eminaomasa/housing_market_dc/blob/main/PostAnalysis1_HousingPrice.ipynb)
+- [PostAnalysis2_MerchantRevenue](https://github.com/eminaomasa/housing_market_dc/blob/main/PostAnalysis2_MerchantRevenue.ipynb)
+- [PostAnalysis3_GoogleMobility](https://github.com/eminaomasa/housing_market_dc/blob/main/PostAnalysis3_GoogleMobility.ipynb)
+
+
 ## Next steps: 
+- Incorporate the mortgage loan interest rate. The FED announced a possible interest rate hike in March. Depending on how much the interest rate increases, US housing demand could decrease. So by analyzing the housing demand response to the interest rate in DC’s neighboring areas, my model can provide more in-depth analysis for real estate developers.
+
 -	Use time-series data with longer coverage. The time-series data used in this model is relatively short. Housing data is monthly and covers a period beginning in July 2016. This means that I had only 65 data points to build a model for each zip code. 
+
 -	Try a deep learning model: The time-series model has to clear many strict assumptions, and the model is limited to a linear or multiplicative relationship. The advanced machine learning model will create more flexibility in modeling and improve the accuracy of the model.
+
 -	Expand the model to other metropolitan regions. The base model and programming codes are ready. I can easily apply these time series models to other metropolitan areas.  
- 
-## Presentation
-add slides here 
 
 ## For More Information 
-Please review our full analysis in our Jupyter Notebook or our presentation.
+Please review my full analysis in notebooks or my presentaion [slides](https://github.com/eminaomasa/housing_market_dc/blob/main/PPTs.pdf).
 For any additional questions, please contact: [Emiko Naomasa](https://www.linkedin.com/in/emiko-n-58782158/) 
-
-
 
 ## Repository Structure
 
