@@ -48,7 +48,8 @@ For modeling, please read my notebooks.
 ## Model Validation: 
 I use the root mean squared error (RMSE) to measure a model's prediction accuracy. I compare the VAR of the housing price model and SARIMAX of the economic forecasting model with naïve time-series modeling. The naïve time-series model is a simple shift of time series by one period.   
  
-Housing Price Forecasting: RMSE by VAR model varies widely across zip codes (from 3,641 to 545,165). Median RMSE is 32,300. Given that median housing prices in this region are around 600,000, the forecast of this model will be off by 6%, which is not a bad number. However, prediction performance varies widely by zip code. Compared with the RMSE of the naïve model ( 51,124) , the VA model shows a significantly lower RMSE. Thus, my VAR model improves prediction performance. 
+Housing Price Forecasting: 
+- RMSE by VAR model varies widely across zip codes (from 3,641 to 545,165). Median RMSE is 32,300. Given that median housing prices in this region are around 600,000, the forecast of this model will be off by 6%, which is not a bad number. However, prediction performance varies widely by zip code. Compared with the RMSE of the naïve model ( 51,124) , the VA model shows a significantly lower RMSE. Thus, my VAR model improves prediction performance. 
 
 Local Economy Forecasting:
 
