@@ -27,13 +27,20 @@ I produced (1) a housing price forecasting model and (2) a next up-and-coming ne
 
 -	COVID-19 daily new cases from [Economic Tracker](https://tracktherecovery.org/): This is daily data available at the county level. 
 
-For data cleaning and EDA, please read my notebooks; [Data_Cleaning_EDA1_Housing_Price](https://github.com/eminaomasa/housing_market_dc/blob/main/Data_Cleaning_EDA1_Housing_Price.ipynb), [Data_Cleaning_EDA2_Neighborhood_Economy](https://github.com/eminaomasa/housing_market_dc/blob/main/Data_Cleaning_EDA2_Neighborhood_Economy.ipynb).
+For data cleaning and EDA, please read my notebooks. 
+- [Data_Cleaning_EDA1_Housing_Price](https://github.com/eminaomasa/housing_market_dc/blob/main/Data_Cleaning_EDA1_Housing_Price.ipynb)
+- [Data_Cleaning_EDA2_Neighborhood_Economy](https://github.com/eminaomasa/housing_market_dc/blob/main/Data_Cleaning_EDA2_Neighborhood_Economy.ipynb).
 
 ## Modeling: 
 
 Housing Price Forecasting: I developed a time-series forecasting model for each zip code in the Washington, DC, metropolitan area and derived the price forecast for January to December 2022. I used a multivariate autoregression (VAR) model with three time series: (1)housing price times series (my main focus), (2) number of active listings in an area, and (3) population net inflow in an area. In a competitive market, housing prices in each zip code are set by supply and demand in the area. The number of active listings indicates housing supply in an area, and net population inflow captures the size of the demand in an area. As I show in my EDA notebook, these three time series relate to each other. To choose the best parameter, I ran a grid search. 
 
 Neighborhood Economy Forecasting: I developed two different time-series forecasting models for each county in the DC metro area. One forecasts people's mobility in retail, recreational stores, and groceries. This forecast provides insight into which county will have more vibrant stores and restaurants. This will be one indicator of which counties will be more populated locations for 2022, and therefore excellent places to develop new housing complexes. Another forecasts business revenue changes for small merchants in a county. Having many small merchants (10 or fewer employees) doing good business indicates strong economic activity in a neighborhood. I use seasonal ARIMA with an exogenous variable (SARIMAX) with daily COVID-19 cases as an exogenous variable for both time series. A surge in new cases of COVID-19 in a region influences the time people spend in commercial stores, and therefore impacts small merchants’ businesses. By running a grid search for each zip code, I pick the best set of parameters. 
+
+For modeling, please read my notebooks.
+- [Model1_VAR_HousingPrice](https://github.com/eminaomasa/housing_market_dc/blob/main/Model1_VAR_HousingPrice.ipynb)
+- [Model2_SARIMA_MerchantRevenue](https://github.com/eminaomasa/housing_market_dc/blob/main/Model2_SARIMA_MerchantRevenue.ipynb)
+- [Model3_SARIMA_GoogleMobility](https://github.com/eminaomasa/housing_market_dc/blob/main/Model3_SARIMA_GoogleMobility.ipynb)
 
 
 ## Model Validation: 
