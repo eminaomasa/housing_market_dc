@@ -21,7 +21,7 @@ I produced (1) a housing price forecasting model and (2) a next up-and-coming ne
 
 - Housing Prices [Realtor.com](https://www.realtor.com/research/data/): This monthly data covers July 2016 to December 2021. I use median listing price data as housing price data and the number of active listings to measure housing supply in a given area. My sample includes only single-family homes. After I eliminated zip codes with fewer than 20 listings, my sample includes 191 zip codes in the Washington, DC, metro area. 
 
-- [USPS Change of Address Data](https://www.google.com/covid19/mobility/index.html?hl=en): This monthly data recodes the inflow and outflow of people from the zip codes. 
+- [USPS Change of Address Data](https://about.usps.com/who/legal/foia/library.htm): This monthly data recodes the inflow and outflow of people from the zip codes. 
 
 - [Google's Community Mobility Data](https://www.google.com/covid19/mobility/index.html?hl=en): This is a daily measurement of time spent and the number of people in different types of places, including parks, retail and recreation, grocery, transit locations, and workplaces. I combine mobility data from retail, recreation, and grocery to measure vibrancy in the commercial place of a county. This daily data is available from January 2020.   
 
